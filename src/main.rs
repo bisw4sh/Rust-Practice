@@ -1,9 +1,11 @@
 use std::io;
+mod sum;
+mod greeting;
 fn main() {
     println!("Hello, world!");
     println!("I'm a Rustacean!");
 
-        // This is an example of a line comment.
+    // This is an example of a line comment.
     // There are two slashes at the beginning of the line.
     // And nothing written after these will be read by the compiler.
     // println!("Hello, world!");
@@ -30,7 +32,7 @@ fn main() {
     let x: i32 = 5 + /* 90 + */ 5;
     println!("Is `x` 10 or 100? x = {}", x);
     let name:&str = "Biswash";
-    greeting(name);
+    greeting::greeting(name);
     //To get sum of two numbers
     println!("enter a number:");
     let mut stra = String::new();
@@ -46,13 +48,6 @@ fn main() {
     let a: i32 =  stra.trim().parse().expect("invalid input");
     let b: i32 =  strb.trim().parse().expect("invalid input");
   
-    sum(a,b);
+    sum::sum(a,b);
 }
 
-fn greeting(name : &str){
-    println!("Hello, {} welcome rust programming", name);
-}
-
-fn sum(x: i32, y: i32) {
-    println!("sum = {}", x+y);
-}
