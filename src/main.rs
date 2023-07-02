@@ -1,6 +1,6 @@
 use std::io;
-mod sum;
-mod greeting;
+mod _02_sum;
+mod _01_greeting;
 fn main() {
     println!("Hello, world!");
     println!("I'm a Rustacean!");
@@ -32,7 +32,7 @@ fn main() {
     let x: i32 = 5 + /* 90 + */ 5;
     println!("Is `x` 10 or 100? x = {}", x);
     let name:&str = "Biswash";
-    greeting::greeting(name);
+    _01_greeting::greeting(name);
     //To get sum of two numbers
     println!("enter a number:");
     let mut stra = String::new();
@@ -48,6 +48,6 @@ fn main() {
     let a: i32 =  stra.trim().parse().expect("invalid input");
     let b: i32 =  strb.trim().parse().expect("invalid input");
   
-    sum::sum(a,b);
+    _02_sum::sum(a,b);
 }
 
